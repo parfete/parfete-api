@@ -3,6 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".paket", ".paket", "{4BE288A3-731C-4B4E-B27E-3BA8ED4B8CF3}"
+	ProjectSection(SolutionItems) = preProject
+		paket.dependencies = paket.dependencies
+	EndProjectSection
+EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{8213334D-3C1E-4A92-BC1D-51B9949FA188}"
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Back.Api", "src\Back.Api\Back.Api.fsproj", "{791DAD64-BF36-4E56-8637-F2A78E88AC0C}"
