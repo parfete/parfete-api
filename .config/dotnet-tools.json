@@ -49,6 +49,12 @@
       "commands": [
         "dotnet-retire"
       ]
+    },
+    "paket": {
+      "version": "7.1.5",
+      "commands": [
+        "paket"
+      ]
     }
   }
 }
