@@ -3,14 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{F6A2EC9E-CCD8-4C97-92DA-0CE0E2BCF72F}"
-EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Parfete.Api.Tests", "tests\Parfete.Api.Tests\Parfete.Api.Tests.fsproj", "{09168246-756F-4930-B699-57DEB0BA504C}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{F801C439-3B4E-4E60-BC95-A087E5BFD04E}"
-EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Parfete.Api", "src\Parfete.Api\Parfete.Api.fsproj", "{5A8EF559-7034-4E63-BDF7-0A0D76544530}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,17 +12,5 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{09168246-756F-4930-B699-57DEB0BA504C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{09168246-756F-4930-B699-57DEB0BA504C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{09168246-756F-4930-B699-57DEB0BA504C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{09168246-756F-4930-B699-57DEB0BA504C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5A8EF559-7034-4E63-BDF7-0A0D76544530}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5A8EF559-7034-4E63-BDF7-0A0D76544530}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5A8EF559-7034-4E63-BDF7-0A0D76544530}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5A8EF559-7034-4E63-BDF7-0A0D76544530}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{09168246-756F-4930-B699-57DEB0BA504C} = {F6A2EC9E-CCD8-4C97-92DA-0CE0E2BCF72F}
-		{5A8EF559-7034-4E63-BDF7-0A0D76544530} = {F801C439-3B4E-4E60-BC95-A087E5BFD04E}
 	EndGlobalSection
 EndGlobal
