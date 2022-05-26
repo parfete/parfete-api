@@ -2,18 +2,15 @@ FROM mcr.microsoft.com/dotnet/sdk:6.0 as build
 
 WORKDIR /src
 
-COPY ./.config/ ./.config/
+COPY ./src/Parfete.Api/ ./Parfete.Api/
 
-RUN dotnet tool restore
+RUN dotnet new sln
 
-COPY ./paket.dependencies ./paket.dependencies
-COPY ./paket.lock ./paket.lock
+RUN dotnet sln add Parfete.Api/
 
-RUN dotnet paket restore
+RUN dotnet restore
 
-COPY ./src/Parfete.Api/ ./src/Parfete.Api/
-
-RUN dotnet build ./src/Parfete.Api/Parfete.Api.fsproj -c Release -o /build/
+RUN dotnet build --no-restore -c Release -o /build/
 
 FROM mcr.microsoft.com/dotnet/aspnet:6.0 as final
 
