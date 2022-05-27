@@ -34,6 +34,6 @@ jobs:
         # relative path to the place where source code with Dockerfile is located
         context: .
         tags: |
-          parfete/parfete:latest
+          parfete/parfete-api:latest
         # build on feature branches, push only on main branch
         push: ${{ github.ref == 'refs/heads/main' }}
