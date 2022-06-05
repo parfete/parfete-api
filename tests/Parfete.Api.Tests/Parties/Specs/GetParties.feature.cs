@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace Parfete.Api.Tests.Users
+namespace Parfete.Api.Tests.Parties.Specs
 {
     using TechTalk.SpecFlow;
     using System;
@@ -19,7 +19,7 @@ namespace Parfete.Api.Tests.Users
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public partial class IRegisterUserFeature : object, Xunit.IClassFixture<IRegisterUserFeature.FixtureData>, System.IDisposable
+    public partial class GetPartiesFeature : object, Xunit.IClassFixture<GetPartiesFeature.FixtureData>, System.IDisposable
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
@@ -28,10 +28,10 @@ namespace Parfete.Api.Tests.Users
         
         private Xunit.Abstractions.ITestOutputHelper _testOutputHelper;
         
-#line 1 "RegisterUser.feature"
+#line 1 "GetParties.feature"
 #line hidden
         
-        public IRegisterUserFeature(IRegisterUserFeature.FixtureData fixtureData, Parfete_Api_Tests_XUnitAssemblyFixture assemblyFixture, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
+        public GetPartiesFeature(GetPartiesFeature.FixtureData fixtureData, Parfete_Api_Tests_XUnitAssemblyFixture assemblyFixture, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
         {
             this._testOutputHelper = testOutputHelper;
             this.TestInitialize();
@@ -40,7 +40,7 @@ namespace Parfete.Api.Tests.Users
         public static void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Users", "I register user", null, ProgrammingLanguage.CSharp, featureTags);
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Parties/Specs", "Get parties", "    It should return a list of parties", ProgrammingLanguage.CSharp, featureTags);
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -80,16 +80,16 @@ namespace Parfete.Api.Tests.Users
             this.TestTearDown();
         }
         
-        [Xunit.SkippableFactAttribute(DisplayName="I register a new user")]
-        [Xunit.TraitAttribute("FeatureTitle", "I register user")]
-        [Xunit.TraitAttribute("Description", "I register a new user")]
-        public void IRegisterANewUser()
+        [Xunit.SkippableFactAttribute(DisplayName="I want to retrieve a list of parties")]
+        [Xunit.TraitAttribute("FeatureTitle", "Get parties")]
+        [Xunit.TraitAttribute("Description", "I want to retrieve a list of parties")]
+        public void IWantToRetrieveAListOfParties()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("I register a new user", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 3
-this.ScenarioInitialize(scenarioInfo);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("I want to retrieve a list of parties", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 4
+    this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
             {
@@ -98,20 +98,49 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 4
-    testRunner.Given("I\'m a new user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
 #line 5
-    testRunner.And("I give my name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+        testRunner.Given("I use the API version 1", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
+                TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Name",
+                            "Date",
+                            "Address"});
+                table1.AddRow(new string[] {
+                            "Party 1",
+                            "01/01/2000",
+                            "Address 1"});
+                table1.AddRow(new string[] {
+                            "Party 2",
+                            "01/01/2000",
+                            "Address 2"});
+                table1.AddRow(new string[] {
+                            "Party 3",
+                            "01/01/2000",
+                            "Address 3"});
 #line 6
-    testRunner.And("I give my address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+        testRunner.Given("I have a list of parties", ((string)(null)), table1, "Given ");
 #line hidden
-#line 7
-    testRunner.When("I sign-in", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 11
+        testRunner.When("I retrieve the list of parties", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 8
-    testRunner.Then("I\'m registered", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+                TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Name",
+                            "Date",
+                            "Address"});
+                table2.AddRow(new string[] {
+                            "Party 1",
+                            "01/01/2000",
+                            "Address 1"});
+                table2.AddRow(new string[] {
+                            "Party 2",
+                            "01/01/2000",
+                            "Address 2"});
+                table2.AddRow(new string[] {
+                            "Party 3",
+                            "01/01/2000",
+                            "Address 3"});
+#line 12
+        testRunner.Then("I should get a list of parties", ((string)(null)), table2, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -124,12 +153,12 @@ this.ScenarioInitialize(scenarioInfo);
             
             public FixtureData()
             {
-                IRegisterUserFeature.FeatureSetup();
+                GetPartiesFeature.FeatureSetup();
             }
             
             void System.IDisposable.Dispose()
             {
-                IRegisterUserFeature.FeatureTearDown();
+                GetPartiesFeature.FeatureTearDown();
             }
         }
     }

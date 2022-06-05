@@ -23,7 +23,8 @@
 		"rajuppadhyay.specflow-steps-definition-generator",
 		"alexkrechik.cucumberautocomplete",
 		"stevejpurves.cucumber",
-		"github.copilot"
+		"github.copilot",
+		"formulahendry.dotnet-test-explorer"
 	],
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
