@@ -18,4 +18,4 @@ WORKDIR /app
 
 COPY --from=build /build/ .
 
-CMD ASPNETCORE_URLS=http://*:$PORT dotnet Parfete.Api.dll
+CMD ASPNETCORE_URLS=https://*:$PORT dotnet Parfete.Api.dll
