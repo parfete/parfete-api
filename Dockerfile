@@ -14,10 +14,13 @@ RUN dotnet build --no-restore -c Release -o /build/
 
 FROM mcr.microsoft.com/dotnet/aspnet:6.0 as final
 
-EXPOSE 80
+ENV PORT=80
+
+EXPOSE $PORT
 
 WORKDIR /app
 
 COPY --from=build /build/ .
 
-ENTRYPOINT [ "dotnet", "Parfete.Api.dll" ]
+# ENTRYPOINT [ "dotnet", "Parfete.Api.dll" ]
+CMD ASPNETCORE_URLS=http://*:$PORT dotnet Parfete.Api.dll
