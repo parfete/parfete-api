@@ -18,4 +18,6 @@ WORKDIR /app
 
 COPY --from=build /build/ .
 
+HEALTHCHECK CMD curl --fail http://localhost:$PORT || exit 1   
+
 CMD ASPNETCORE_URLS=http://*:$PORT dotnet Parfete.Api.dll
