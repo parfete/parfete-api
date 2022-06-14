@@ -29,6 +29,7 @@ jobs:
     - name: Build image and push to Docker Hub
       uses: docker/build-push-action@v2
       with:
+        file: ./Dockerfile-docker
         # relative path to the place where source code with Dockerfile is located
         context: .
         tags: |
