@@ -6,8 +6,8 @@ on:
 
 jobs:
 
-  build-and-push-docker-image:
-    name: Build Docker image and push to repository
+  build-and-push-image-to-heroku:
+    name: Build image and push to Heroku
     # run only when code is compiling and tests are passing
     runs-on: ubuntu-latest
 
